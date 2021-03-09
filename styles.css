@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+body{
+    margin: 0;
+    background-color:hsl(210, 46%, 95%);
+}
+
+strong{
+    font-weight: 500;
+}
+
+/* =============
+Typography
+=============== */
+
+.opacity-50{
+    opacity: 50%;
+    font-size: 11px;
+}
+
+
+/* ================
+        Layout
+============== */
+.wrapper{
+    margin: 4em auto;
+    width: 86%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.85fr 1fr 0.925fr 1.6fr 1.825fr;
+    grid-template-areas:
+    "section-a"
+    "section-b"
+    "section-c"
+    "section-d"
+    "section-e";
+    grid-gap: 2em;
+}
+
+@media(min-width:500px){
+    .wrapper{
+        margin: 10em auto;
+        width: 80%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "section-a section-a section-b section-e"
+        "section-c section-d section-d section-e"
+    }
+}
+
+.component{
+    border-radius: 7px;
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 35px;
+    padding-bottom: 22px;
+}
+
+
+
+/* Section -a */
+.section-a{
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    grid-area: section-a;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+}
+
+.name{
+    margin-left: 1em;
+}
+
+.opacity-70{
+    opacity: 70%;
+}
+.section-a .opacity-70{
+    padding-right: 9px;
+}
+
+/* Section-b */
+.section-b{
+    background-color:hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+    grid-area: section-b;
+}
+
+/* Section-c */
+.section-c{
+    grid-area: section-c;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.section-e{
+    grid-area: section-e;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.section-c,
+.section-e{
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(217, 19%, 35%)
+}
+
+/* Section-d */
+.section-d{
+    background-color:hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-area: section-d;
+}
+
+
+/* ==============
+        Images
+================= */
+.profile-img{
+    display: inline-block;
+    height: 31px;
+    border-radius: 50%;
+}
+.img-a{
+    content: url("images/image-daniel.jpg");
+    border: 2px solid #A77DDD;
+}
+.img-b{
+    content: url("images/image-jonathan.jpg");
+    
+}
+.img-c{
+    content: url("images/image-jeanette.jpg");
+}
+.img-d{
+    content: url("images/image-patrick.jpg");
+    border: 2px solid #A77DDD;
+}
+.img-e{
+    content: url("images/image-kira.jpg");
+}
+.name{
+    display: inline-block;
+}
